@@ -1,4 +1,13 @@
 # HTML
+- task: AzureRmWebAppDeployment@5
+  inputs:
+    ConnectionType: 'AzureRM'
+    azureSubscription: 'Pay-As-You-Go(cae0c97a-074f-470f-921a-e09250a693a5)'
+    appType: 'webAppLinux'
+    WebAppName: 'demohtml'
+    packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'
+    RuntimeStack: 'PHP:8.2'
+    DeploymentTypeLinux: 'oneDeploy'
 - task: AzureWebApp@1
   inputs:
     azureSubscription: 'Pay-As-You-Go(cae0c97a-074f-470f-921a-e09250a693a5)'
